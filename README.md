@@ -9,3 +9,5 @@ This project examined the effect of inoculation timing and arbuscular mycorrhiza
 - code to reproduce analyses
 ## outputs
 .csv files exported during code execution
+## supplementary
+.xlsx files attached to manuscript

@@ -1,0 +1,281 @@
+﻿Unit,Block,SampleNo.,SampleName,AMFIsolate,ColonizationRegion,HarvestTime,Treatment,InoculationTreatment,InoculationTiming,ConcentrationPeruL.1.10,CopiesPer20uLWell,ConcentrationPeruL,ConcentrationPerGSample,AcceptedDroplets
+3,1,3-R,CC4-co-inoc-2mos-1-R,CC4,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,2.9,58,29,101500,16797
+3,1,3-S,CC4-co-inoc-2mos-1-S,CC4,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.9,18,9,31500,14740
+39,2,39-R,CC4-co-inoc-2mos-2-R,CC4,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,1.3,26,13,45500,15144
+39,2,39-S,CC4-co-inoc-2mos-2-S,CC4,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.76,15.2,7.6,26600,18526
+46,3,46-R,CC4-co-inoc-2mos-3-R,CC4,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.28,5.6,2.8,9800,16908
+46,3,46-S,CC4-co-inoc-2mos-3-S,CC4,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.87,17.4,8.7,30450,18912
+78,4,78-R,CC4-co-inoc-2mos-4-R,CC4,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,9.5,190,95,332500,18985
+78,4,78-S,CC4-co-inoc-2mos-4-S,CC4,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,3.5,70,35,122500,19773
+98,5,98-R,CC4-co-inoc-2mos-5-R,CC4,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,1.1,22,11,38500,18020
+98,5,98-S,CC4-co-inoc-2mos-5-S,CC4,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,2.9,58,29,101500,18176
+105,6,105-R,CC4-co-inoc-2mos-6-R,CC4,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,3.8,76,38,133000,16505
+105,6,105-S,CC4-co-inoc-2mos-6-S,CC4,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.88,17.6,8.8,30800,18746
+121,7,121-R,CC4-co-inoc-2mos-7-R,CC4,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,34,680,340,1190000,17254
+121,7,121-S,CC4-co-inoc-2mos-7-S,CC4,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.25,5,2.5,8750,14273
+13,1,13-R,CC4-co-inoc-4mos-1-R,CC4,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,5.3,106,53,185500,20105
+13,1,13-S,CC4-co-inoc-4mos-1-S,CC4,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,1,20,10,35000,17037
+29,2,29-R,CC4-co-inoc-4mos-2-R,CC4,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,3.7,74,37,129500,20233
+29,2,29-S,CC4-co-inoc-4mos-2-S,CC4,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.89,17.8,8.9,31150,18418
+42,3,42-R,CC4-co-inoc-4mos-3-R,CC4,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,3.8,76,38,133000,14234
+42,3,42-S,CC4-co-inoc-4mos-3-S,CC4,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,2.7,54,27,94500,18388
+79,4,79-R,CC4-co-inoc-4mos-4-R,CC4,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,3.4,68,34,119000,18037
+79,4,79-S,CC4-co-inoc-4mos-4-S,CC4,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,1.8,36,18,63000,19338
+97,5,97-R,CC4-co-inoc-4mos-5-R,CC4,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,1.1,22,11,38500,16072
+97,5,97-S,CC4-co-inoc-4mos-5-S,CC4,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.23,4.6,2.3,8050,15368
+112,6,112-R,CC4-co-inoc-4mos-6-R,CC4,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.56,11.2,5.6,19600,18780
+112,6,112-S,CC4-co-inoc-4mos-6-S,CC4,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.09,1.8,0.9,3150,12398
+140,7,140-R,CC4-co-inoc-4mos-7-R,CC4,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.15,3,1.5,5250,15239
+140,7,140-S,CC4-co-inoc-4mos-7-S,CC4,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.34,6.8,3.4,11900,17100
+6,1,6-R,CC4-pre-inoc-1-2mos-1-R,CC4,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,4.5,90,45,157500,17717
+6,1,6-S,CC4-pre-inoc-1-2mos-1-S,CC4,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,1,20,10,35000,16917
+40,2,40-R,CC4-pre-inoc-1-2mos-2-R,CC4,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,5.1,102,51,178500,12855
+40,2,40-S,CC4-pre-inoc-1-2mos-2-S,CC4,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,1.1,22,11,38500,18891
+59,3,59-R,CC4-pre-inoc-1-2mos-3-R,CC4,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,2.5,50,25,87500,17067
+59,3,59-S,CC4-pre-inoc-1-2mos-3-S,CC4,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.93,18.6,9.3,32550,17758
+76,4,76-R,CC4-pre-inoc-1-2mos-4-R,CC4,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.73,14.6,7.3,25550,17696
+76,4,76-S,CC4-pre-inoc-1-2mos-4-S,CC4,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.85,17,8.5,29750,19356
+91,5,91-R,CC4-pre-inoc-1-2mos-5-R,CC4,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,31,620,310,1085000,19248
+91,5,91-S,CC4-pre-inoc-1-2mos-5-S,CC4,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.36,7.2,3.6,12600,16470
+118,6,118-R,CC4-pre-inoc-1-2mos-6-R,CC4,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,2.4,48,24,84000,18248
+118,6,118-S,CC4-pre-inoc-1-2mos-6-S,CC4,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.13,2.6,1.3,4550,17707
+124,7,124-R,CC4-pre-inoc-1-2mos-7-R,CC4,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,6.5,130,65,227500,15676
+124,7,124-S,CC4-pre-inoc-1-2mos-7-S,CC4,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.07,1.4,0.7,2450,16422
+5,1,5-R,CC4-pre-inoc-1-4mos-1-R,CC4,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,18.6,372,186,651000,15775
+5,1,5-S,CC4-pre-inoc-1-4mos-1-S,CC4,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,1,20,10,35000,17058
+24,2,24-R,CC4-pre-inoc-1-4mos-2-R,CC4,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,1.1,22,11,38500,18555
+24,2,24-S,CC4-pre-inoc-1-4mos-2-S,CC4,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.81,16.2,8.1,28350,17476
+57,3,57-R,CC4-pre-inoc-1-4mos-3-R,CC4,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,6.2,124,62,217000,15865
+57,3,57-S,CC4-pre-inoc-1-4mos-3-S,CC4,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.07,1.4,0.7,2450,16867
+63,4,63-R,CC4-pre-inoc-1-4mos-4-R,CC4,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,2.3,46,23,80500,17666
+63,4,63-S,CC4-pre-inoc-1-4mos-4-S,CC4,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,1.04,20.8,10.4,36400,19304
+84,5,84-R,CC4-pre-inoc-1-4mos-5-R,CC4,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,7.1,142,71,248500,16828
+84,5,84-S,CC4-pre-inoc-1-4mos-5-S,CC4,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.16,3.2,1.6,5600,14625
+101,6,101-R,CC4-pre-inoc-1-4mos-6-R,CC4,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.21,4.2,2.1,7350,17162
+101,6,101-S,CC4-pre-inoc-1-4mos-6-S,CC4,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.43,8.6,4.3,15050,19333
+130,7,130-R,CC4-pre-inoc-1-4mos-7-R,CC4,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,57.3,1146,573,2005500,17156
+130,7,130-S,CC4-pre-inoc-1-4mos-7-S,CC4,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.32,6.4,3.2,11200,18344
+7,1,7-R,CC4-pre-inoc-2-2mos-1-R,CC4,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.1,22,11,38500,18464
+7,1,7-S,CC4-pre-inoc-2-2mos-1-S,CC4,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.4,28,14,49000,17201
+28,2,28-R,CC4-pre-inoc-2-2mos-2-R,CC4,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,3.1,62,31,108500,17277
+28,2,28-S,CC4-pre-inoc-2-2mos-2-S,CC4,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.93,18.6,9.3,32550,19077
+44,3,44-R,CC4-pre-inoc-2-2mos-3-R,CC4,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,5.9,118,59,206500,13622
+44,3,44-S,CC4-pre-inoc-2-2mos-3-S,CC4,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.1,22,11,38500,13875
+70,4,70-R,CC4-pre-inoc-2-2mos-4-R,CC4,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,8,160,80,280000,17352
+70,4,70-S,CC4-pre-inoc-2-2mos-4-S,CC4,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.71,14.2,7.1,24850,18174
+85,5,85-R,CC4-pre-inoc-2-2mos-5-R,CC4,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,8.2,164,82,287000,18047
+85,5,85-S,CC4-pre-inoc-2-2mos-5-S,CC4,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.25,5,2.5,8750,14147
+111,6,111-R,CC4-pre-inoc-2-2mos-6-R,CC4,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.88,17.6,8.8,30800,17367
+111,6,111-S,CC4-pre-inoc-2-2mos-6-S,CC4,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.42,8.4,4.2,14700,14168
+133,7,133-R,CC4-pre-inoc-2-2mos-7-R,CC4,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.8,16,8,28000,13855
+133,7,133-S,CC4-pre-inoc-2-2mos-7-S,CC4,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.19,3.8,1.9,6650,18533
+16,1,16-R,CC4-pre-inoc-2-4mos-1-R,CC4,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,1,20,10,35000,17250
+16,1,16-S,CC4-pre-inoc-2-4mos-1-S,CC4,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,1,20,10,35000,16925
+31,2,31-R,CC4-pre-inoc-2-4mos-2-R,CC4,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.37,7.4,3.7,12950,15938
+31,2,31-S,CC4-pre-inoc-2-4mos-2-S,CC4,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.2,24,12,42000,17108
+58,3,58-R,CC4-pre-inoc-2-4mos-3-R,CC4,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,20.6,412,206,721000,16340
+58,3,58-S,CC4-pre-inoc-2-4mos-3-S,CC4,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.13,2.6,1.3,4550,17499
+65,4,65-R,CC4-pre-inoc-2-4mos-4-R,CC4,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,9.8,196,98,343000,18277
+65,4,65-S,CC4-pre-inoc-2-4mos-4-S,CC4,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.2,24,12,42000,18108
+82,5,82-R,CC4-pre-inoc-2-4mos-5-R,CC4,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.7,34,17,59500,20665
+82,5,82-S,CC4-pre-inoc-2-4mos-5-S,CC4,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.43,8.6,4.3,15050,13791
+110,6,110-R,CC4-pre-inoc-2-4mos-6-R,CC4,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,1,20,10,35000,17926
+110,6,110-S,CC4-pre-inoc-2-4mos-6-S,CC4,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.18,3.6,1.8,6300,13414
+125,7,125-R,CC4-pre-inoc-2-4mos-7-R,CC4,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.6,32,16,56000,15747
+125,7,125-S,CC4-pre-inoc-2-4mos-7-S,CC4,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.08,1.6,0.8,2800,15628
+15,1,15-R,Control-2mos-1-R,Control,Roots,2,Control,non-colonized roots,no inoculation,0,0,0,0,18253
+15,1,15-S,Control-2mos-1-S,Control,Soil,2,Control,non-colonized roots,no inoculation,0,0,0,0,18453
+27,2,27-R,Control-2mos-2-R,Control,Roots,2,Control,non-colonized roots,no inoculation,0,0,0,0,17761
+27,2,27-S,Control-2mos-2-S,Control,Soil,2,Control,non-colonized roots,no inoculation,0,0,0,0,18796
+53,3,53-R,Control-2mos-3-R,Control,Roots,2,Control,non-colonized roots,no inoculation,0,0,0,0,17369
+53,3,53-S,Control-2mos-3-S,Control,Soil,2,Control,non-colonized roots,no inoculation,0,0,0,0,17549
+77,4,77-R,Control-2mos-4-R,Control,Roots,2,Control,non-colonized roots,no inoculation,0,0,0,0,16270
+77,4,77-S,Control-2mos-4-S,Control,Soil,2,Control,non-colonized roots,no inoculation,0,0,0,0,18471
+92,5,92-R,Control-2mos-5-R,Control,Roots,2,Control,non-colonized roots,no inoculation,0,0,0,0,16186
+92,5,92-S,Control-2mos-5-S,Control,Soil,2,Control,non-colonized roots,no inoculation,0,0,0,0,17657
+106,6,106-R,Control-2mos-6-R,Control,Roots,2,Control,non-colonized roots,no inoculation,0,0,0,0,15413
+106,6,106-S,Control-2mos-6-S,Control,Soil,2,Control,non-colonized roots,no inoculation,0,0,0,0,16957
+126,7,126-R,Control-2mos-7-R,Control,Roots,2,Control,non-colonized roots,no inoculation,0,0,0,0,15187
+126,7,126-S,Control-2mos-7-S,Control,Soil,2,Control,non-colonized roots,no inoculation,0,0,0,0,14087
+8,1,8-R,Control-4mos-1-R,Control,Roots,4,Control,non-colonized roots,no inoculation,0,0,0,0,15620
+8,1,8-S,Control-4mos-1-S,Control,Soil,4,Control,non-colonized roots,no inoculation,0,0,0,0,14187
+35,2,35-R,Control-4mos-2-R,Control,Roots,4,Control,non-colonized roots,no inoculation,0,0,0,0,14668
+35,2,35-S,Control-4mos-2-S,Control,Soil,4,Control,non-colonized roots,no inoculation,0,0,0,0,17432
+60,3,60-R,Control-4mos-3-R,Control,Roots,4,Control,non-colonized roots,no inoculation,0,0,0,0,18597
+60,3,60-S,Control-4mos-3-S,Control,Soil,4,Control,non-colonized roots,no inoculation,0,0,0,0,17959
+80,4,80-R,Control-4mos-4-R,Control,Roots,4,Control,non-colonized roots,no inoculation,0,0,0,0,18045
+80,4,80-S,Control-4mos-4-S,Control,Soil,4,Control,non-colonized roots,no inoculation,0,0,0,0,14856
+87,5,87-R,Control-4mos-5-R,Control,Roots,4,Control,non-colonized roots,no inoculation,0,0,0,0,18687
+87,5,87-S,Control-4mos-5-S,Control,Soil,4,Control,non-colonized roots,no inoculation,0,0,0,0,15786
+115,6,115-R,Control-4mos-6-R,Control,Roots,4,Control,non-colonized roots,no inoculation,0,0,0,0,16217
+115,6,115-S,Control-4mos-6-S,Control,Soil,4,Control,non-colonized roots,no inoculation,0,0,0,0,11046
+139,7,139-R,Control-4mos-7-R,Control,Roots,4,Control,non-colonized roots,no inoculation,0,0,0,0,17787
+139,7,139-S,Control-4mos-7-S,Control,Soil,4,Control,non-colonized roots,no inoculation,0,0,0,0,14833
+14,1,14-R,Cuba8-co-inoc-2mos-1-R,Cuba8,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,1.7,34,17,59500,18037
+14,1,14-S,Cuba8-co-inoc-2mos-1-S,Cuba8,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,7.4,148,74,259000,16188
+26,2,26-R,Cuba8-co-inoc-2mos-2-R,Cuba8,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,2.1,42,21,73500,19887
+26,2,26-S,Cuba8-co-inoc-2mos-2-S,Cuba8,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,6.2,124,62,217000,18639
+49,3,49-R,Cuba8-co-inoc-2mos-3-R,Cuba8,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,2.7,54,27,94500,17697
+49,3,49-S,Cuba8-co-inoc-2mos-3-S,Cuba8,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.55,11,5.5,19250,14908
+75,4,75-R,Cuba8-co-inoc-2mos-4-R,Cuba8,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.68,13.6,6.8,23800,18993
+75,4,75-S,Cuba8-co-inoc-2mos-4-S,Cuba8,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,7.8,156,78,273000,18022
+90,5,90-R,Cuba8-co-inoc-2mos-5-R,Cuba8,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.59,11.8,5.9,20650,15831
+90,5,90-S,Cuba8-co-inoc-2mos-5-S,Cuba8,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.9,18,9,31500,12556
+104,6,104-R,Cuba8-co-inoc-2mos-6-R,Cuba8,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.64,12.8,6.4,22400,14600
+104,6,104-S,Cuba8-co-inoc-2mos-6-S,Cuba8,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,1.3,26,13,45500,14840
+134,7,134-R,Cuba8-co-inoc-2mos-7-R,Cuba8,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,1,20,10,35000,14639
+134,7,134-S,Cuba8-co-inoc-2mos-7-S,Cuba8,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,1.3,26,13,45500,17864
+20,1,20-R,Cuba8-co-inoc-4mos-1-R,Cuba8,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,2.2,44,22,77000,20579
+20,1,20-S,Cuba8-co-inoc-4mos-1-S,Cuba8,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,8.2,164,82,287000,16386
+22,2,22-R,Cuba8-co-inoc-4mos-2-R,Cuba8,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,1.3,26,13,45500,20444
+22,2,22-S,Cuba8-co-inoc-4mos-2-S,Cuba8,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,5.2,104,52,182000,18595
+56,3,56-R,Cuba8-co-inoc-4mos-3-R,Cuba8,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,2.9,58,29,101500,19176
+56,3,56-S,Cuba8-co-inoc-4mos-3-S,Cuba8,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,1.2,24,12,42000,16611
+69,4,69-R,Cuba8-co-inoc-4mos-4-R,Cuba8,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.19,3.8,1.9,6650,18440
+69,4,69-S,Cuba8-co-inoc-4mos-4-S,Cuba8,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,6.9,138,69,241500,18927
+88,5,88-R,Cuba8-co-inoc-4mos-5-R,Cuba8,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,1.1,22,11,38500,18936
+88,5,88-S,Cuba8-co-inoc-4mos-5-S,Cuba8,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.58,11.6,5.8,20300,12266
+107,6,107-R,Cuba8-co-inoc-4mos-6-R,Cuba8,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.56,11.2,5.6,19600,16743
+107,6,107-S,Cuba8-co-inoc-4mos-6-S,Cuba8,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,2,40,20,70000,18081
+129,7,129-R,Cuba8-co-inoc-4mos-7-R,Cuba8,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.55,11,5.5,19250,15075
+129,7,129-S,Cuba8-co-inoc-4mos-7-S,Cuba8,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,1.1,22,11,38500,18452
+17,1,17-R,Cuba8-pre-inoc-1-2mos-1-R,Cuba8,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,5.8,116,58,203000,17261
+17,1,17-S,Cuba8-pre-inoc-1-2mos-1-S,Cuba8,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,5.8,116,58,203000,18039
+25,2,25-R,Cuba8-pre-inoc-1-2mos-2-R,Cuba8,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,2.5,50,25,87500,20537
+25,2,25-S,Cuba8-pre-inoc-1-2mos-2-S,Cuba8,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,7.5,150,75,262500,17131
+47,3,47-R,Cuba8-pre-inoc-1-2mos-3-R,Cuba8,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,3.1,62,31,108500,20645
+47,3,47-S,Cuba8-pre-inoc-1-2mos-3-S,Cuba8,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,8.6,172,86,301000,19145
+62,4,62-R,Cuba8-pre-inoc-1-2mos-4-R,Cuba8,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,1.6,32,16,56000,18121
+62,4,62-S,Cuba8-pre-inoc-1-2mos-4-S,Cuba8,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,6.4,128,64,224000,19395
+89,5,89-R,Cuba8-pre-inoc-1-2mos-5-R,Cuba8,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,2.5,50,25,87500,15746
+89,5,89-S,Cuba8-pre-inoc-1-2mos-5-S,Cuba8,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.57,11.4,5.7,19950,16426
+117,6,117-R,Cuba8-pre-inoc-1-2mos-6-R,Cuba8,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,5.3,106,53,185500,16105
+117,6,117-S,Cuba8-pre-inoc-1-2mos-6-S,Cuba8,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,1.1,22,11,38500,17050
+132,7,132-R,Cuba8-pre-inoc-1-2mos-7-R,Cuba8,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.73,14.6,7.3,25550,14493
+132,7,132-S,Cuba8-pre-inoc-1-2mos-7-S,Cuba8,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,1,20,10,35000,17734
+1,1,1-R,Cuba8-pre-inoc-1-4mos-1-R,Cuba8,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,2.8,56,28,98000,12045
+1,1,1-S,Cuba8-pre-inoc-1-4mos-1-S,Cuba8,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,6.8,136,68,238000,18751
+33,2,33-R,Cuba8-pre-inoc-1-4mos-2-R,Cuba8,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,2.5,50,25,87500,15562
+33,2,33-S,Cuba8-pre-inoc-1-4mos-2-S,Cuba8,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,8,160,80,280000,17489
+48,3,48-R,Cuba8-pre-inoc-1-4mos-3-R,Cuba8,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,3.3,66,33,115500,20524
+48,3,48-S,Cuba8-pre-inoc-1-4mos-3-S,Cuba8,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,8.3,166,83,290500,11840
+68,4,68-R,Cuba8-pre-inoc-1-4mos-4-R,Cuba8,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,2.2,44,22,77000,18178
+68,4,68-S,Cuba8-pre-inoc-1-4mos-4-S,Cuba8,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,6.1,122,61,213500,18425
+95,5,95-R,Cuba8-pre-inoc-1-4mos-5-R,Cuba8,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,5,100,50,175000,16766
+95,5,95-S,Cuba8-pre-inoc-1-4mos-5-S,Cuba8,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,1.5,30,15,52500,15978
+103,6,103-R,Cuba8-pre-inoc-1-4mos-6-R,Cuba8,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,17.6,352,176,616000,18421
+103,6,103-S,Cuba8-pre-inoc-1-4mos-6-S,Cuba8,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,2.2,44,22,77000,17917
+123,7,123-R,Cuba8-pre-inoc-1-4mos-7-R,Cuba8,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.58,11.6,5.8,20300,18176
+123,7,123-S,Cuba8-pre-inoc-1-4mos-7-S,Cuba8,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.71,14.2,7.1,24850,14940
+9,1,9-R,Cuba8-pre-inoc-2-2mos-1-R,Cuba8,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.6,32,16,56000,20888
+9,1,9-S,Cuba8-pre-inoc-2-2mos-1-S,Cuba8,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,5.8,116,58,203000,17179
+23,2,23-R,Cuba8-pre-inoc-2-2mos-2-R,Cuba8,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.7,34,17,59500,17425
+23,2,23-S,Cuba8-pre-inoc-2-2mos-2-S,Cuba8,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,7.1,142,71,248500,15341
+52,3,52-R,Cuba8-pre-inoc-2-2mos-3-R,Cuba8,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,2.7,54,27,94500,16214
+52,3,52-S,Cuba8-pre-inoc-2-2mos-3-S,Cuba8,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.79,15.8,7.9,27650,14934
+71,4,71-R,Cuba8-pre-inoc-2-2mos-4-R,Cuba8,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.93,18.6,9.3,32550,19076
+71,4,71-S,Cuba8-pre-inoc-2-2mos-4-S,Cuba8,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,6.5,130,65,227500,16768
+96,5,96-R,Cuba8-pre-inoc-2-2mos-5-R,Cuba8,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.81,16.2,8.1,28350,15945
+96,5,96-S,Cuba8-pre-inoc-2-2mos-5-S,Cuba8,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.5,30,15,52500,15277
+116,6,116-R,Cuba8-pre-inoc-2-2mos-6-R,Cuba8,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.95,19,9.5,33250,18651
+116,6,116-S,Cuba8-pre-inoc-2-2mos-6-S,Cuba8,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.7,34,17,59500,11863
+127,7,127-R,Cuba8-pre-inoc-2-2mos-7-R,Cuba8,Roots,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.7,34,17,59500,16232
+127,7,127-S,Cuba8-pre-inoc-2-2mos-7-S,Cuba8,Soil,2,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.78,15.6,7.8,27300,15127
+19,1,19-R,Cuba8-pre-inoc-2-4mos-1-R,Cuba8,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.4,28,14,49000,17420
+19,1,19-S,Cuba8-pre-inoc-2-4mos-1-S,Cuba8,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,7.6,152,76,266000,17637
+32,2,32-R,Cuba8-pre-inoc-2-4mos-2-R,Cuba8,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.5,10,5,17500,14112
+32,2,32-S,Cuba8-pre-inoc-2-4mos-2-S,Cuba8,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,6.6,132,66,231000,18697
+50,3,50-R,Cuba8-pre-inoc-2-4mos-3-R,Cuba8,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,2.7,54,27,94500,14382
+50,3,50-S,Cuba8-pre-inoc-2-4mos-3-S,Cuba8,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.59,11.8,5.9,20650,15926
+74,4,74-R,Cuba8-pre-inoc-2-4mos-4-R,Cuba8,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.78,15.6,7.8,27300,16552
+74,4,74-S,Cuba8-pre-inoc-2-4mos-4-S,Cuba8,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,6.5,130,65,227500,16950
+83,5,83-R,Cuba8-pre-inoc-2-4mos-5-R,Cuba8,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.83,16.6,8.3,29050,18506
+83,5,83-S,Cuba8-pre-inoc-2-4mos-5-S,Cuba8,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.69,13.8,6.9,24150,13674
+109,6,109-R,Cuba8-pre-inoc-2-4mos-6-R,Cuba8,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,0.77,15.4,7.7,26950,18228
+109,6,109-S,Cuba8-pre-inoc-2-4mos-6-S,Cuba8,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.3,26,13,45500,11263
+138,7,138-R,Cuba8-pre-inoc-2-4mos-7-R,Cuba8,Roots,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,4,80,40,140000,17059
+138,7,138-S,Cuba8-pre-inoc-2-4mos-7-S,Cuba8,Soil,4,Pre-inoculation-2,pre-colonized roots + AMF,combination,1.9,38,19,66500,15304
+11,1,11-R,DAOM197198-co-inoc-2mos-1-R,DAOM197198,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.08,1.6,0.8,2800,15144
+11,1,11-S,DAOM197198-co-inoc-2mos-1-S,DAOM197198,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0,0,0,0,15473
+21,2,21-R,DAOM197198-co-inoc-2mos-2-R,DAOM197198,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,1.8,36,18,63000,16531
+21,2,21-S,DAOM197198-co-inoc-2mos-2-S,DAOM197198,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0,0,0,0,14952
+51,3,51-R,DAOM197198-co-inoc-2mos-3-R,DAOM197198,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.2,4,2,7000,11690
+51,3,51-S,DAOM197198-co-inoc-2mos-3-S,DAOM197198,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.08,1.6,0.8,2800,14029
+67,4,67-R,DAOM197198-co-inoc-2mos-4-R,DAOM197198,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.12,2.4,1.2,4200,19828
+67,4,67-S,DAOM197198-co-inoc-2mos-4-S,DAOM197198,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.06,1.2,0.6,2100,18149
+100,5,100-R,DAOM197198-co-inoc-2mos-5-R,DAOM197198,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.15,3,1.5,5250,15631
+100,5,100-S,DAOM197198-co-inoc-2mos-5-S,DAOM197198,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,1,20,10,35000,11577
+113,6,113-R,DAOM197198-co-inoc-2mos-6-R,DAOM197198,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.08,1.6,0.8,2800,15132
+113,6,113-S,DAOM197198-co-inoc-2mos-6-S,DAOM197198,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0,0,0,0,16177
+136,7,136-R,DAOM197198-co-inoc-2mos-7-R,DAOM197198,Roots,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.1,2,1,3500,12160
+136,7,136-S,DAOM197198-co-inoc-2mos-7-S,DAOM197198,Soil,2,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.13,2.6,1.3,4550,18508
+4,1,4-R,DAOM197198-co-inoc-4mos-1-R,DAOM197198,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.12,2.4,1.2,4200,19078
+4,1,4-S,DAOM197198-co-inoc-4mos-1-S,DAOM197198,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.1,2,1,3500,11302
+36,2,36-R,DAOM197198-co-inoc-4mos-2-R,DAOM197198,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0,0,0,0,14366
+36,2,36-S,DAOM197198-co-inoc-4mos-2-S,DAOM197198,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.07,1.4,0.7,2450,17140
+54,3,54-R,DAOM197198-co-inoc-4mos-3-R,DAOM197198,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.8,16,8,28000,12518
+54,3,54-S,DAOM197198-co-inoc-4mos-3-S,DAOM197198,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0,0,0,0,16439
+72,4,72-R,DAOM197198-co-inoc-4mos-4-R,DAOM197198,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.7,14,7,24500,12490
+72,4,72-S,DAOM197198-co-inoc-4mos-4-S,DAOM197198,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0,0,0,0,17468
+99,5,99-R,DAOM197198-co-inoc-4mos-5-R,DAOM197198,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0,0,0,0,16558
+99,5,99-S,DAOM197198-co-inoc-4mos-5-S,DAOM197198,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0,0,0,0,16180
+114,6,114-R,DAOM197198-co-inoc-4mos-6-R,DAOM197198,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.23,4.6,2.3,8050,15520
+114,6,114-S,DAOM197198-co-inoc-4mos-6-S,DAOM197198,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0,0,0,0,13522
+122,7,122-R,DAOM197198-co-inoc-4mos-7-R,DAOM197198,Roots,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.25,5,2.5,8750,14275
+122,7,122-S,DAOM197198-co-inoc-4mos-7-S,DAOM197198,Soil,4,Co-inoculation,non-colonized roots + AMF,co-inoculation,0.15,3,1.5,5250,16162
+10,1,10-R,DAOM197198-pre-inoc-1-2mos-1-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,22.6,452,226,791000,15952
+10,1,10-S,DAOM197198-pre-inoc-1-2mos-1-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,8.1,162,81,283500,10938
+38,2,38-R,DAOM197198-pre-inoc-1-2mos-2-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,45,900,450,1575000,16219
+38,2,38-S,DAOM197198-pre-inoc-1-2mos-2-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.07,1.4,0.7,2450,16770
+41,3,41-R,DAOM197198-pre-inoc-1-2mos-3-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,5.7,114,57,199500,15852
+41,3,41-S,DAOM197198-pre-inoc-1-2mos-3-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,22.4,448,224,784000,18072
+61,4,61-R,DAOM197198-pre-inoc-1-2mos-4-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,1.2,24,12,42000,11176
+61,4,61-S,DAOM197198-pre-inoc-1-2mos-4-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0,0,0,0,11839
+86,5,86-R,DAOM197198-pre-inoc-1-2mos-5-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,2.5,50,25,87500,11667
+86,5,86-S,DAOM197198-pre-inoc-1-2mos-5-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.06,1.2,0.6,2100,18931
+102,6,102-R,DAOM197198-pre-inoc-1-2mos-6-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,17.7,354,177,619500,14082
+102,6,102-S,DAOM197198-pre-inoc-1-2mos-6-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0,0,0,0,11577
+135,7,135-R,DAOM197198-pre-inoc-1-2mos-7-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.52,10.4,5.2,18200,11238
+135,7,135-S,DAOM197198-pre-inoc-1-2mos-7-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0,0,0,0,19479
+2,1,2-R,DAOM197198-pre-inoc-1-4mos-1-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.06,1.2,0.6,2100,18396
+2,1,2-S,DAOM197198-pre-inoc-1-4mos-1-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.32,6.4,3.2,11200,11031
+37,2,37-R,DAOM197198-pre-inoc-1-4mos-2-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0,0,0,0,15045
+37,2,37-S,DAOM197198-pre-inoc-1-4mos-2-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,11.2,224,112,392000,15481
+45,3,45-R,DAOM197198-pre-inoc-1-4mos-3-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,1.9,38,19,66500,11613
+45,3,45-S,DAOM197198-pre-inoc-1-4mos-3-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.07,1.4,0.7,2450,17082
+64,4,64-R,DAOM197198-pre-inoc-1-4mos-4-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,1.6,32,16,56000,10120
+64,4,64-S,DAOM197198-pre-inoc-1-4mos-4-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.09,1.8,0.9,3150,12935
+93,5,93-R,DAOM197198-pre-inoc-1-4mos-5-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.67,13.4,6.7,23450,14058
+93,5,93-S,DAOM197198-pre-inoc-1-4mos-5-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,2,40,20,70000,15702
+108,6,108-R,DAOM197198-pre-inoc-1-4mos-6-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,5.3,106,53,185500,15916
+108,6,108-S,DAOM197198-pre-inoc-1-4mos-6-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0,0,0,0,15482
+128,7,128-R,DAOM197198-pre-inoc-1-4mos-7-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.67,13.4,6.7,23450,15882
+128,7,128-S,DAOM197198-pre-inoc-1-4mos-7-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots,pre-inoculation,0.06,1.2,0.6,2100,18295
+18,1,18-R,DAOM197198-pre-inoc-2-2mos-1-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,6.6,132,66,231000,16508
+18,1,18-S,DAOM197198-pre-inoc-2-2mos-1-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.38,7.6,3.8,13300,15654
+30,2,30-R,DAOM197198-pre-inoc-2-2mos-2-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,126,2520,1260,4410000,15122
+30,2,30-S,DAOM197198-pre-inoc-2-2mos-2-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,2.3,46,23,80500,14165
+55,3,55-R,DAOM197198-pre-inoc-2-2mos-3-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.8,16,8,28000,15808
+55,3,55-S,DAOM197198-pre-inoc-2-2mos-3-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.43,8.6,4.3,15050,16495
+66,4,66-R,DAOM197198-pre-inoc-2-2mos-4-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.34,6.8,3.4,11900,10359
+66,4,66-S,DAOM197198-pre-inoc-2-2mos-4-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,0,0,0,0,18576
+94,5,94-R,DAOM197198-pre-inoc-2-2mos-5-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.66,13.2,6.6,23100,14170
+94,5,94-S,DAOM197198-pre-inoc-2-2mos-5-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.29,5.8,2.9,10150,16261
+119,6,119-R,DAOM197198-pre-inoc-2-2mos-6-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,35,700,350,1225000,15106
+119,6,119-S,DAOM197198-pre-inoc-2-2mos-6-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,0,0,0,0,16961
+131,7,131-R,DAOM197198-pre-inoc-2-2mos-7-R,DAOM197198,Roots,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.67,13.4,6.7,23450,14118
+131,7,131-S,DAOM197198-pre-inoc-2-2mos-7-S,DAOM197198,Soil,2,Pre-inoculation-1,pre-colonized roots + AMF,combination,0,0,0,0,19418
+12,1,12-R,DAOM197198-pre-inoc-2-4mos-1-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,2.6,52,26,91000,16915
+12,1,12-S,DAOM197198-pre-inoc-2-4mos-1-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.14,2.8,1.4,4900,16751
+34,2,34-R,DAOM197198-pre-inoc-2-4mos-2-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.08,1.6,0.8,2800,15293
+34,2,34-S,DAOM197198-pre-inoc-2-4mos-2-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.27,5.4,2.7,9450,17441
+43,3,43-R,DAOM197198-pre-inoc-2-4mos-3-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.9,18,9,31500,10563
+43,3,43-S,DAOM197198-pre-inoc-2-4mos-3-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,11.5,230,115,402500,17939
+73,4,73-R,DAOM197198-pre-inoc-2-4mos-4-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,8.8,176,88,308000,13012
+73,4,73-S,DAOM197198-pre-inoc-2-4mos-4-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.07,1.4,0.7,2450,17689
+81,5,81-R,DAOM197198-pre-inoc-2-4mos-5-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.09,1.8,0.9,3150,12925
+81,5,81-S,DAOM197198-pre-inoc-2-4mos-5-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.07,1.4,0.7,2450,17544
+120,6,120-R,DAOM197198-pre-inoc-2-4mos-6-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.08,1.6,0.8,2800,15075
+120,6,120-S,DAOM197198-pre-inoc-2-4mos-6-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,0.12,2.4,1.2,4200,18944
+137,7,137-R,DAOM197198-pre-inoc-2-4mos-7-R,DAOM197198,Roots,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,3.2,64,32,112000,11406
+137,7,137-S,DAOM197198-pre-inoc-2-4mos-7-S,DAOM197198,Soil,4,Pre-inoculation-1,pre-colonized roots + AMF,combination,0,0,0,0,17877

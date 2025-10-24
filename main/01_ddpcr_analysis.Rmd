@@ -17,7 +17,7 @@ This document presents a hurdle model analysis of droplet digital PCR (ddPCR) da
 
 -   The conditional abundance (continuous part) — the amount detected when present.
 
-```{r pressure, echo=FALSE}
+```{r}
 # Load required packages
 library(tidyverse)
 library(glmmTMB)
@@ -655,3 +655,4 @@ p3
 ggsave(p3,filename = "Figure3.2_ddpcr_count_ht4.png", dpi = 300, width = 8, 
        height = 6, units = "in")
 ```
+

@@ -1,0 +1,193 @@
+---
+title: "Beta Diversity Analysis"
+author: "Kuselah Tayaban"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+This workflow performs beta diversity analyses on AMF community data derived from soil samples.
+
+```{r}
+# Load packages
+library(dplyr)
+library(labdsv)
+library(vegan)
+library(ape)
+library(glue)
+library(pairwiseAdonis)
+library(ggplot2)
+```
+
+## Data import
+
+Absolute abundance data were rarefied and transformed to relative abundance before
+
+```{r}
+# Load data
+otu<- read_excel("Expt01_asv_table.xlsx", sheet = "abund")
+tax<- read_excel("Expt01_asv_table.xlsx", sheet = "tax")
+data<-read_excel("Expt01_asv_table.xlsx", sheet = "metadata")
+otu <- otu %>%
+  tibble::column_to_rownames("OTU") 
+tax <- tax %>%
+  tibble::column_to_rownames("OTU") 
+data <- data %>%
+  tibble::column_to_rownames("Sample") 
+otu <- as.matrix(otu)
+tax <- as.matrix(tax)
+data <- as.matrix(data)
+# remove samples with <1000 reads
+new_otu<-otu[,colSums(otu)>=1000]
+new_data<-data[-c(50,46,27), ]
+# rarefy data
+new_otu<-t(new_otu)
+spAbund <- rowSums(new_otu)
+spAbund
+raremin <-min(spAbund)
+raremin
+sRare <- rarefy(new_otu, raremin)
+sRare
+set.seed(8765) # set random seed for reproducibility
+otu_rare<-rrarefy(new_otu,sample = 1392)
+# transform sample counts to relative 
+otu_rare <- t(otu_rare) # samples are rows
+otu<-out_rare%>%
+  tax_glom(taxrank = "Species")%>%
+  transform_sample_counts(function(x) {x/sum(x)*100})
+```
+
+## Distance calculation
+
+Beta diversity was calculated using Bray–Curtis dissimilarity, which quantifies differences in community composition based on relative abundances and is robust to joint absences, making it well suited for abundance-based community data.
+
+```{r}
+# compute bray-curtis distances using vegan
+bc.dist=vegdist(otu.sqrt,distance="bray")
+```
+
+## Ordination
+
+Principal Coordinates Analysis (PCoA) was used to visualize patterns in community dissimilarity among samples. This ordination method represents samples in a reduced-dimensional space based on their pairwise Bray–Curtis distances.
+
+```{r}
+set.seed(21)
+pc<-cmdscale(bc.dist,eig = TRUE,add = TRUE)
+positions <- pc$points
+colnames(positions) <- c("pcoa1", "pcoa2")
+pcoa <- as.data.frame(positions)
+
+#add columns to data frame 
+pcoa$Sample = meta_table$Sample
+pcoa$AMFIsolate = meta_table$AMFInoculant
+pcoa$InoculationTiming = meta_table$InoculationTiming
+head(pcoa)
+
+percent_explained <- 100 * pc$eig / sum(pc$eig)
+pretty_pe <- format(round(percent_explained, digits =1), nsmall=1, trim=TRUE)
+labels <- c(glue("PCoA 1 ({pretty_pe[1]}%)"),
+            glue("PCoA 2 ({pretty_pe[2]}%)"))
+pcoa %>%
+  as_tibble(rownames = "samples") %>%
+  ggplot(aes(x=pcoa1, y=pcoa2)) +
+  geom_point() +
+  labs(x=labels[1], y=labels[2])
+```
+
+## Statistical analysis
+
+Differences in AMF community composition among treatments were tested using Permutation Analysis of Variance (PERMANOVA) based on Bray–Curtis dissimilarity. Homogeneity of dispersion among groups was evaluated using PERMDISP. Not significant results indicate that dispersion within groups are similar, thus can be attributed to shifts in community rather than differences in within-group variability.
+
+```{r}
+set.seed(105)
+perm<-adonis2(bc.dist~InoculationTiming+AMFInoculant+
+                InoculationTiming*AMFInoculant,
+              data = meta_table,by = "terms", permutations = 9999) # AMF inoculant significant
+
+# Test of heterogeneity of dispersion using PERMDISP2
+# for factor inoculation treatment
+mod_inoc = betadisper(bc.dist,meta_table$InoculationTiming)
+anova(mod_inoc) # not significant
+# plot
+plot(mod_inoc, segments = FALSE, col = c('red', 'blue', 'orange','blue4'), ellipse=TRUE)
+
+# for factor AMF inoculant
+mod_amf = betadisper(bc.dist,meta_table$AMFInoculant)
+anova(mod_amf) # not significant
+# plot
+plot(mod_amf, segments = FALSE, col = c('red', 'blue', 'orange','blue4'), ellipse=TRUE)
+
+# pairwise permanova for significant term
+pairwise.perm <- pairwise.adonis2(bc.dist~AMFInoculant,data = meta_table,permutations = 9999)
+```
+
+## Visualization
+
+```{r}
+# plot ordination
+# arrange samples
+pcoa$InoculationTiming<-factor(pcoa$InoculationTiming,
+                                  levels = c( "no inoculation",
+                                              "pre-inoculation",
+                                              "co-inoculation",
+                                              "combination"))
+pcoa$AMFIsolate<-factor(pcoa$AMFIsolate,levels=c("Control",
+                                                 "DAOM197198","CC4","Cuba8"))
+
+# plot ordination grouped by inoculation treatment
+p1<-ggplot(data = pcoa, aes(x=pcoa1,y=pcoa2,group=InoculationTiming)) +
+  geom_point(data = pcoa, position = "jitter",
+             size = 2, aes(fill=InoculationTiming,
+                           colour = InoculationTiming))
+# modify plot
+p1<-p1+
+  scale_color_manual(values = c("#999999","#0072B2","#D55E00","#CC79A7"))+
+  scale_fill_manual(values = c("#999999","#0072B2","#D55E00","#CC79A7"))+
+  theme_bw()+
+  theme(panel.border = element_rect(colour = "black"),
+        panel.grid.major = element_blank(),panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        strip.background = element_blank(),
+        axis.ticks = element_blank()) +
+  labs(x=labels[1], y=labels[2])
+# add ellipse
+p1 <- p1 + stat_ellipse(aes(x= pcoa1,y=pcoa2,group = InoculationTiming,
+                              fill = InoculationTiming),geom = "polygon",alpha = 0.2) +
+  theme(legend.position = "right")
+p1
+
+# save
+ggsave(p1,filename = "Figure3.5_pcoa_treatments.png",units = "in",width = 7,
+       height = 4)
+
+# plot ordination grouped by AMF isolate
+p2<-ggplot(data = pcoa, aes(x=pcoa1,y=pcoa2,group=AMFIsolate)) +
+  geom_point(data = pcoa, position = "jitter",
+             size = 2, aes(fill=AMFIsolate,
+                           colour = AMFIsolate))
+# modify plot
+p2<-p2+
+  scale_color_manual(values = c("#999999","#0072B2","#D55E00","#CC79A7"))+
+  scale_fill_manual(values = c("#999999","#0072B2","#D55E00","#CC79A7"))+
+  theme_bw()+
+  theme(panel.border = element_rect(colour = "black"),
+        panel.grid.major = element_blank(),panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        strip.background = element_blank(),
+        axis.ticks = element_blank()) +
+  labs(x=labels[1], y=labels[2])
+# add ellipse
+p <- p2 + stat_ellipse(aes(x= pcoa1,y=pcoa2,group = AMFIsolate,
+                              fill = AMFIsolate),geom = "polygon",alpha = 0.2) +
+  theme(legend.position = "right")
+p2
+
+# save
+ggsave(p2.5,filename = "FigureB9_pcoa_amf.png",units = "in",width = 7,
+       height = 4)
+```

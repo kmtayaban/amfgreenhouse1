@@ -1,0 +1,104 @@
+---
+title: "Differential Abundance Analysis"
+author: "Kuselah Tayaban"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+This workflow performs differential abundance analysis on soil AMF communities using the DESeq2 package. The goal is to identify ASVs or taxa that differ significantly in abundance between treatments.
+
+```{r}
+# Load packages
+library(phyloseq)
+library(DESeq2)
+library(dplyr)
+library(readxl)
+library(vegan)
+library(ggplot2)
+```
+
+## Data import
+
+```{r}
+# Load data
+otu<- read_excel("Expt01_asv_table.xlsx", sheet = "abund") # absolute abundance
+tax<- read_excel("Expt01_asv_table.xlsx", sheet = "tax") # taxa
+data<-read_excel("Expt01_asv_table.xlsx", sheet = "metadata") # metadata
+# Set row names
+otu <- otu %>%
+          tibble::column_to_rownames("OTU") 
+tax <- tax %>%
+          tibble::column_to_rownames("OTU") 
+data <- data %>%
+          tibble::column_to_rownames("Sample") 
+otu <- as.matrix(otu)
+tax <- as.matrix(tax)
+# Remove samples with >1000 reads
+otu<-otu[,colSums(otu)>=1000]
+data<-data[-c(50,46,27), ]
+otu<-t(otu)
+# Rarefy
+spAbund <- rowSums(otu)
+spAbund
+raremin <-min(otu)
+raremin
+sRare <- rarefy(otu, raremin)
+sRare
+set.seed(8765) # set seed for reproducibility
+otu_rare<-rrarefy(otu,sample = 1392)
+```
+
+Absolute abundance were rarefied to equal sequencing depth at 1392 sequences per sample, and were used for further analysis.
+
+## Build phyloseq object
+
+```{r}
+# convert dataframe to phyloseq object
+otu = otu_table(t(otu_rare), taxa_are_rows = TRUE)
+tax = tax_table(tax)
+data = sample_data(data)
+amf<-phyloseq(otu,tax,data)
+amf
+```
+
+### Differential abundance analysis
+
+Differential abundance analysis was done only between significant factors. Factor "Inoculation Timing" was found to have significant effect on soil AMF community based on PERMANOVA analysis, and was further subjected to differential abundance analysis.
+
+```{r}
+# convert phyloseq object to Deseq2 object
+amfdds <- phyloseq_to_deseq2(amf,~InoculationTiming)
+# run da analysis
+set.seed(5678)
+amfdds <-DESeq(amfdds,test = "Wald",fitType = "parametric")
+res = results(amfdds)
+res = cbind(as(res, "data.frame"), as(tax_table(amf)[rownames(res), ], "matrix"))
+res_nas <- na.omit(res) # samples with no log2 fold changes were omitted
+# export dataframe 
+write.csv2(res_nas,file = "Expt01_da_taxa.csv")
+```
+
+Wald tests were used to assess differential abundance between treatments, testing whether log2 fold changes differed significantly from zero. Dispersion estimates were fit using a parametric model, which assumes a smooth relationship between mean abundance and variance across taxa, which were confirmed in initial data inspection in alpha (02_alpha_diversity_analysis.rmd) and beta diversity analysis (02_beta_diversity_analysis.rmd) workflows.
+
+## Visualization
+
+```{r}
+# sort factors according to decreasing/increasing log2 fold change
+x = tapply(res_nas$log2FoldChange, res_nas$Species, function(x) max(x))
+x = sort(x, TRUE)
+res_nas$Species = factor(as.character(res_nas$Species), levels=names(x))
+
+# plot
+p <- ggplot(res_nas, aes(x=Species, y=log2FoldChange, fill = Genus)) + geom_bar(stat = "identity") + geom_hline(yintercept = 0) +
+coord_flip() + scale_fill_brewer(palette = "Paired") + theme_classic() +
+  theme (axis.text.y = element_text(size = 6)) +
+labs(y="log2 Fold Change",x="ASV", fill="Genus") + ylim(-4,4) # grouped at VT level but colored at Genus level
+# save plot
+ggsave(p,filename = "Figure3.6_da_taxa.png",units = "in", height = 8,width = 5,dpi = 300)
+```

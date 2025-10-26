@@ -1,0 +1,298 @@
+---
+title: "Mycorrhizal Response Analysis"
+author: "Kuselah Tayaban"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+This analysis evaluates whether mycorrhizal responses (MR) of plant host among experimental treatments.
+
+```{r}
+# Load packages
+library(labdsv)
+library(vegan)
+library(readxl)
+library(pairwiseAdonis)
+```
+
+## Data import
+
+```{r}
+mr<-read_excel("mr_data.xlsx", sheet = "mr") # samples are rows
+metadata<-read_excel("mr_data.xlsx", sheet = "data")
+# set row names
+mr_df<-as.matrix(mr[, -1])
+rownames(mr_df)<-mr$SampleName
+```
+
+## Distance calculation
+
+In this analysis, Euclidean distance was used to quantify dissimilarities among samples based on their mycorrhizal response variables since they consist of continuous numeric measurements. Euclidean distance is appropriate for this type of data because it measures the absolute differences among samples across multiple continuous variables.
+
+```{r}
+# compute euclidean distances
+mr.dist=vegdist(mr_df,method = "euclidean")
+```
+
+## Statistical analysis
+
+To test whether treatments differ significantly in their mycorrhizal response patterns, euclidean distance matrix was used as input for permutational analysis of variance (PERMANOVA).
+
+```{r}
+#run PERMANOVA
+set.seed(105)
+perm<-adonis2(mr.dist~InoculationTreatment+AMFIsolate+HarvestTime+
+                InoculationTreatment*AMFIsolate+
+                InoculationTreatment*HarvestTime+
+                AMFIsolate*HarvestTime+ InoculationTreatment*AMFIsolate+
+                InoculationTreatment*AMFIsolate*HarvestTime,
+              data = metadata,by = "terms", permutations = 9999)
+
+#Tests of heterogeneity of dispersion using PERMDISP2
+# for factor inoculation treatment
+mod_inoc = betadisper(mr.dist,metadata$InoculationTreatment)
+anova(mod_inoc) # not significant
+
+# for factor AMF inoculant
+mod_amf = betadisper(mr.dist,metadata$AMFIsolate)
+anova(mod_amf) # not significant
+
+# for factor harvest time
+mod_ht = betadisper(mr.dist,metadata$HarvestTime)
+anova(mod_ht) # significant
+
+# post hoc test for significant terms using pairwise permanova
+# for harvest time
+# Harvest time
+set.seed(55)
+pairperm.ht<-pairwise.adonis2(mr.dist~HarvestTime,
+                               data = metadata, permutations = 9999) # significant
+```
+
+## envfit analysis
+
+To identify other factors that explain variation in mycorrhizal responses, an envfit analysis was done using the *vegan* package. This approach fits environmental vectors onto a Principal Component Analysis (PCoA) ordination based on Euclidean distances of MR data, to test for significant correlations between MR patterns and environmental variables.
+
+```{r}
+# make ordination
+set.seed(21)
+pc<-cmdscale(mr.dist,eig = TRUE,add = TRUE)
+positions <- pc$points
+colnames(positions) <- c("pcoa1", "pcoa2")
+pcoa <- as.data.frame(positions)
+#add columns to data frame 
+pcoa$Sample = metadata$SampleName
+pcoa$InoculationTreatment = metadata$InoculationTreatment
+pcoa$AMFIsolate = metadata$AMFIsolate
+pcoa$HarvestTime = metadata$HarvestTime
+head(pcoa)
+# add labels to ordination 
+percent_explained <- 100 * pc$eig / sum(pc$eig)
+pretty_pe <- format(round(percent_explained, digits =1), nsmall=1, trim=TRUE)
+labels <- c(glue("PCoA 1 ({pretty_pe[1]}%)"),
+            glue("PCoA 2 ({pretty_pe[2]}%)"))
+pcoa %>%
+  as_tibble(rownames = "samples") %>%
+  ggplot(aes(x=pcoa1, y=pcoa2)) +
+  geom_point() +
+  labs(x=labels[1], y=labels[2])
+# add variables
+new_mt <- metadata[c(1,2,3,4,8,10,12,14,16,18,19)]
+new_mt <- new_mt[,4:11]
+# add environmental vectors
+en = envfit(pc, new_mt, permutations = 9999)
+en
+# put in a dataframe
+en_coord_cont = as.data.frame(scores(en, "vectors")) * ordiArrowMul(en)
+# rename columns
+names(en_coord_cont)[names(en_coord_cont) == "Dim1"] <- "pcoa1"
+names(en_coord_cont)[names(en_coord_cont) == "Dim2"] <- "pcoa2"
+```
+
+## Visualization
+
+### Box plots
+
+```{r}
+# import data
+mr <- read_xlsx("mr_data.xlsx", sheet = "All")
+
+# set factors
+mr$AMFIsolate<-as.factor(mr$AMFIsolate)
+mr$HarvestTime<-as.factor(mr$HarvestTime)
+mr$InoculationTiming<-as.factor(mr$InoculationTiming)
+# drop controls
+levels(mr$AMFIsolate)
+new_data<-droplevels(subset(mr,AMFIsolate !="Control"))
+# re-arrange factors
+new_data$InoculationTiming<-factor(new_data$InoculationTiming,
+                                  levels = c("co-inoculation",
+                                             "pre-inoculation",
+                                             "combination"))
+new_data$AMFIsolate<-factor(new_data$AMFIsolate,
+                        levels = c("DAOM197198",
+                                   "CC4",
+                                   "Cuba8"))
+# fix harvest time labels
+harvesttime<-c("2 months","4 months")
+names(harvesttime)<-c("2","4")
+
+# plot
+#MR total biomass
+p1 <- ggplot(new_data, aes(x=InoculationTiming, y=TotalBiomassMR,
+                          color = AMFIsolate,fill = AMFIsolate)) + 
+  geom_boxplot(alpha = 0.2, show.legend = FALSE) +
+  facet_grid(~HarvestTime, 
+             labeller = labeller(HarvestTime = harvesttime)) +
+  theme_classic(base_size = 12)+theme(panel.grid = element_blank(),
+                                      strip.background = element_blank())+
+  scale_fill_manual(values = c("#004488","#DDAA33","#BB5566")) +
+  scale_color_manual(values = c("#004488","#DDAA33","#BB5566"))
+p1
+#fix labels
+p1<-p1 + labs(y = "MR Total Biomass",fill = "AMF Inoculant") +
+  theme(axis.title.x = element_blank(),axis.text.x = element_blank()) +
+  guides(fill = guide_legend("AMF Isolate"),
+         color = guide_legend("AMF Isolate")) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "#999999")
+p1
+
+# MR root:shoot ratio
+p2 <- ggplot(new_data, aes(x=InoculationTiming, y=Root.ShootRatioMR,
+                           color = AMFIsolate,fill = AMFIsolate)) + 
+  geom_boxplot(alpha = 0.2, show.legend = FALSE) +
+  facet_grid(~HarvestTime, 
+             labeller = labeller(HarvestTime = harvesttime)) +
+  theme_classic(base_size = 12)+theme(panel.grid = element_blank(),strip.background = 
+                     element_blank())+
+  scale_fill_manual(values = c("#004488","#DDAA33","#BB5566")) +
+  scale_color_manual(values = c("#004488","#DDAA33","#BB5566"))
+p2
+#fix labels
+p2<-p2 + labs(y = "MR Root:Shoot Ratio",fill = "AMF Isolate") +
+  theme(axis.title.x = element_blank(),axis.text.x = element_blank()) +
+  guides(fill = guide_legend("AMF Isolate"),
+         color = guide_legend("AMF Isolate")) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "#999999")
+p2
+
+# MR shoot P
+p3 <- ggplot(new_data, aes(x=InoculationTiming, y=ShootPMR,
+                           color = AMFIsolate,fill = AMFIsolate)) + 
+  geom_boxplot(alpha = 0.2) +
+  facet_grid(~HarvestTime, 
+             labeller = labeller(HarvestTime = harvesttime)) +
+  theme_classic(base_size = 12)+theme(panel.grid = element_blank(),strip.background = 
+                     element_blank())+
+  scale_fill_manual(values = c("#004488","#DDAA33","#BB5566")) +
+  scale_color_manual(values = c("#004488","#DDAA33","#BB5566"))
+p3
+#fix labels
+p3 <- p3 + labs(y = "MR Shoot P",fill = "AMF Isolate") +
+  theme(legend.position = "bottom",axis.text.x = element_text(angle = -65,hjust = 0,vjust = 0.5)) +
+  guides(fill = guide_legend("AMF Isolate"),
+         color = guide_legend("AMF Isolate")) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "#999999")
+p3
+
+# MR shoot biomass
+p4 <- ggplot(new_data, aes(x=InoculationTiming, y=ShootMR,
+                     color = AMFIsolate,fill = AMFIsolate)) + 
+  geom_boxplot(alpha = 0.2) +
+  facet_grid(~HarvestTime, 
+             labeller = labeller(HarvestTime = harvesttime)) +
+  theme_classic(base_size = 12)+theme(panel.grid = element_blank(),strip.background = 
+                          element_blank())+
+  scale_fill_manual(values = c("#004488","#DDAA33","#BB5566")) +
+  scale_color_manual(values = c("#004488","#DDAA33","#BB5566"))
+p4
+#fix labels
+p4 <- p4 + labs(y = "MR Shoot Biomass",fill = "AMF Isolate") +
+  theme(axis.title.x = element_blank(),axis.text.x = element_blank(),
+        legend.position = "none") +
+  guides(fill = guide_legend("AMF Isolate"),
+         color = guide_legend("AMF Isolate")) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "#999999")
+p4
+
+# MR Root biomass
+p5 <- ggplot(new_data, aes(x=InoculationTiming, y=RootMR,
+                     color = AMFIsolate,fill = AMFIsolate)) + 
+  geom_boxplot(alpha = 0.2) +
+  facet_grid(~HarvestTime, 
+             labeller = labeller(HarvestTime = harvesttime)) +
+  theme_classic(base_size = 12)+theme(panel.grid = element_blank(),strip.background = 
+                          element_blank())+
+  scale_fill_manual(values = c("#004488","#DDAA33","#BB5566")) +
+  scale_color_manual(values = c("#004488","#DDAA33","#BB5566"))
+p5
+#fix labels
+p5 <- p5 + labs(y = "MR Root Biomass",fill = "AMF Isolate") +
+  theme(legend.position = "bottom",axis.text.x = element_text(angle = -65,hjust = 0,vjust = 0.5)) +
+  guides(fill = guide_legend("AMF Isolate"),
+         color = guide_legend("AMF Isolate")) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "#999999")
+p5
+
+# save plot for MR total biomass and MR shoot P
+# patchwork to combine the two plots
+p <- p1/p3 + plot_annotation(tag_levels = 'A')
+p
+#save
+ggsave(p,filename = "Figure3.7_mr_main.png", dpi = 300, width = 8, 
+      height = 9, units = "in")
+# save plot for other MR data
+# patchwork to combine all other plots
+p <- p2/p4/p5 + plot_annotation(tag_levels = 'A')
+p
+#save
+ggsave(p,filename = "FigureB10_mr_others.png", dpi = 300, width = 8, 
+       height = 10, units = "in")
+```
+
+### PCoA ordination
+
+```{r}
+# arrange samples
+pcoa$InoculationTiming<-factor(pcoa$InoculationTiming,
+                                         levels = c( 
+                                           "pre-inoculation",
+                                           "co-inoculation",
+                                           "combination"))
+pcoa$AMFIsolate<-factor(pcoa$AMFIsolate,levels=c(
+  "DAOM197198","CC4","Cuba8"))
+pcoa$HarvestTime<-factor(pcoa$HarvestTime,levels=c("2", "4"))
+
+# plot
+shape=c(15,16,17)
+p1<-ggplot(data = pcoa, aes(x=pcoa1,y=pcoa2)) +
+  geom_point(data = pcoa, position = "jitter", alpha = 0.5, 
+             aes(colour=InoculationTiming,
+             shape=AMFIsolate,size = HarvestTime)) +
+  geom_segment(aes(x = 0, y = 0, xend = pcoa1, 
+                            yend = pcoa2), data = en_coord_cont, 
+               linewidth =1, alpha = 0.5, colour = "#999") +
+  geom_text(data = en_coord_cont, colour = "grey30",
+            label = row.names(en_coord_cont))
+# modify plot
+p1<-p1+scale_shape_manual(values = shape)+
+  scale_color_manual(values = c("#0072B2","#D55E00","#CC79A7"))+
+  scale_fill_manual(values = c("#0072B2","#D55E00","#CC79A7"))+
+  theme_bw()+
+  theme(panel.border = element_rect(colour = "black"),
+        panel.grid.major = element_blank(),panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        strip.background = element_blank(),
+        axis.ticks = element_blank()) +
+  labs(x=labels[1], y=labels[2])
+p1
+# save plot
+ggsave(p1,filename = "mr_pcoa.svg",height = 5.5, width = 7, 
+       units = "in", dpi = 300)
+```
